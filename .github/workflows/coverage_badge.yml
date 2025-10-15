@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest --junitxml=pytest.xml --cov-report=term-missing --cov=flowpipe tests/ | tee pytest-coverage.txt
+          poetry run pytest --junitxml=pytest.xml --cov-report=term-missing --cov=flowpipe tests/ | tee pytest-coverage.txt
 
       - name: Coverage comment
         id: coverage
